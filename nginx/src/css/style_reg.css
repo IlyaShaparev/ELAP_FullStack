@@ -1,0 +1,152 @@
+@import url(reset.css);
+@import url(style_first.css);
+
+section{
+    width:100%;
+}
+
+#main .container{
+    display: flex;
+    justify-content: center;
+}
+
+#main .content-container{
+    border: 2px solid #DF7861;
+    border-radius: 35px;
+    background-color: #FCF8E8;
+    box-shadow: 5px 5px 10px 0px #000;
+}
+
+#form{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'Exo 2';
+    font-size: 20px;
+    padding: 5px;
+}
+
+#form p{
+    width: 100%;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+#form #btn {
+    margin: auto;
+    background-color: #f8f2f2;
+    border: 1px solid #DF7861;
+    font-size: 20px;
+    width: 130px;
+    height: 40px;
+}
+
+#form input{
+    font-size: 18px;
+    padding-left: 5px;
+    margin: 5px;
+    width: 150px;
+    height: 20px;
+    border: 1px double #DF7861;
+}
+
+#form #ch{
+    width: 20px;
+    height: 20px;
+}
+
+@media (min-width: 630px){
+    section{
+        width:100%;
+    }
+
+    #main .container {
+        width: 80%;
+        margin: 0, auto;
+        max-width: 768px;
+    }
+
+    #main .content-container{
+        font-size: 35px;
+        width: 100%;
+    }
+
+    #form {
+        font-size: 35px;
+    }
+
+    #form #ch{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (min-width: 768px){
+    #main .container {
+        width:50%;
+        max-width: 1440px;
+    }
+
+    #form input {
+        width: 150px;
+        height: 25px;
+    }
+
+}
+
+@media (min-width: 1024px){
+    section{
+        width:100%;
+    }
+
+    #main .container {
+        width:35%;
+        margin: 0, auto;
+        max-width: 1440px;
+    }
+
+    #main .content-container{
+        font-size: 35px;
+        width: 100%;
+    }
+
+    #form {
+        font-size: 35px;
+    }
+
+    #form #ch{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (min-width: 1440px){
+    section{
+        width:100%;
+    }
+
+    #main .container {
+        width: 25%;
+        margin: 0, auto;
+        max-width: 2560px;
+    }
+
+    #main .content-container{
+        font-size: 35px;
+        width: 100%;
+    }
+
+    #form {
+        font-size: 35px;
+    }
+
+    #form #ch{
+        width: 25px;
+        height: 25px;
+    }
+}

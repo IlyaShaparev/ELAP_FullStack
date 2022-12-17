@@ -1,0 +1,424 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+    box-sizing: border-box;
+}
+ul,
+ol,
+li{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    background-color: #FCF8E8;
+    color: #DF7861;
+    min-height: 100vh;
+}
+a{
+    color:#DF7861;
+    text-decoration: none;
+}
+.wrapper{
+    min-height: 100%;
+}
+
+/* ---------------------- */
+/* ---------------------- */
+/* ---------------------- */
+/* ---------------------- */
+/* ---------------------- */
+
+#header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ECDFC8;
+    min-height: 90px;
+    width: 100%;
+    z-index: 10;
+    left: 0;
+    top: 0;
+}
+
+#logo{
+    width: 50px;
+    height: 45px;
+}
+
+.navigation{
+    width: max-content;
+}
+
+#menu{
+    font-size: 25px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#menu .menu__link{
+    margin-right: 20px;
+}
+
+#menu .menu__link:hover{
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+#menu .menu__link:last-child{
+    margin-right: 0px;
+}
+
+#contain{
+    display:none;
+}
+
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+
+@media (min-width:1440px) {
+    #logo{
+        width: 100px;
+        height: 95px;
+    }
+    #menu{
+        font-size: 30px;
+    }
+}
+
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+
+@media (min-width:768px) {
+    #logo{
+        width: 75px;
+        height: 70px;
+    }
+    #menu{
+        font-size: 25px;
+    }
+    
+}
+
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+
+@media (max-width:768px) {
+    #header{
+        justify-content: center;
+    }
+    
+    #logo{
+        margin: 10px;
+        width: 75px;
+        height: 70px;
+    }
+
+    #contain{
+        display:inline-block;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 0px;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #DF7861;
+        margin: 6px 0;
+        transition: 0.7s;
+    }
+    #menu {
+        width: 0px;
+        overflow: hidden;
+        background: #ECDFC8;
+        height: 0;
+        max-height: 0px; 
+        list-style-type: none;
+        padding-left: 0;
+        /* -webkit-transition: linear 1s; */
+        transition: linear 1s;
+    }
+    #menu.open {
+        width:max-content;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-height: 500px; 
+        /* -webkit-transition: linear 1s; */
+        /* transition: linear 1s; */
+      
+    }
+    #menu .menu__link {
+        float: none;
+        text-align: left;
+        text-decoration: none;
+        width: 100%; 
+        padding: 10px;
+        /* -webkit-transition: linear 1s; */
+        /* transition: linear 1s; */
+    }
+    #menu .menu__link:last-child{
+        padding:0px;
+    }
+    #menu .menu__link a {
+        border-bottom: 2px solid #DF7861;
+        display: block;
+        padding: 10px;
+        /* -webkit-transition: linear 1s; */
+        /* transition: linear 1s; */
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+}
+
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+/* _____HEADER__ADD__STYLE_____ */
+
+@media (max-width: 500px) {
+    #header{
+        justify-content: center;
+    }
+
+    #logo{
+        width: 75px;
+        height: 70px;
+    }
+
+    #contain{
+        display:inline-block;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 0px;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #DF7861;
+        margin: 6px 0;
+        transition: 0.7s;
+    }
+    #menu {
+        width: 0px;
+        overflow: hidden;
+        background: #ECDFC8;
+        height: 0;
+        max-height: 0px; 
+        list-style-type: none;
+        padding-left: 0;
+        -webkit-transition: linear 1s;
+        transition: linear 1s;
+    }
+    #menu.open {
+        width:max-content;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-height: 500px; 
+        -webkit-transition: linear 1s;
+        transition: linear 1s;
+      
+    }
+    #menu .menu__link {
+        float: none;
+        text-align: left;
+        text-decoration: none;
+        width: 100%; 
+        /* -webkit-transition: linear 1s; */
+        transition: linear 1s;
+    }
+    #menu .menu__link a {
+        border-bottom: 2px solid #DF7861;
+        display: block;
+        padding: 10px;
+        /* -webkit-transition: linear 1s; */
+        /* transition: linear 1s; */
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+}
+
+#section-1{
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+#par{
+    align-self: flex-start;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-bottom: 5px double #DF7861;
+    font-size: 30px;
+}
+.container{
+    margin: 0 auto;
+    max-width: 85%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.table__res{
+    overflow-x: auto;
+}
+
+
+
+/* _____BUTTON__STYLE_____ */
+/* _____BUTTON__STYLE_____ */
+/* _____BUTTON__STYLE_____ */
+/* _____BUTTON__STYLE_____ */
+
+.buttons{
+    display: flex;
+    width: 100%;
+    align-items:center;
+    justify-content: space-between;
+    margin-bottom: 4em;
+}
+#btn1, #btn2 {
+    min-width:150px;
+    margin-bottom: 1em;
+    cursor: pointer;
+    width: 45%;
+    font-size: 20px;
+    text-align: center;
+    background-color: #ECDFC8;
+    color: #DF7861;
+    border-radius: 70em;
+}
+
+/* _____FOOTER__STYLE_____ */
+/* _____FOOTER__STYLE_____ */
+/* _____FOOTER__STYLE_____ */
+/* _____FOOTER__STYLE_____ */
+
+footer{
+    font-size: 25px;
+    position:relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 3em;
+}
+
+/* _____TABLE__STYLE_____ */
+/* _____TABLE__STYLE_____ */
+/* _____TABLE__STYLE_____ */
+/* _____TABLE__STYLE_____ */
+
+.table__container {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.table__container.__active{
+    width: 100%;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* _____TABLE__STYLE_____ */
+/* _____TABLE__STYLE_____ */
+/* _____TABLE__STYLE_____ */
+/* _____TABLE__STYLE_____ */
+
+.table__container__2 {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.table__container__2.__active{
+    width: 100%;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.table__{
+    position:relative;
+    height: 100%;
+    width:100%;
+    border: 1px solid #DF7861;
+    border-collapse: collapse;
+}
+.head__{
+    padding: 20px;
+    font-size: 25px;
+    border: 3px solid #DF7861;
+}
+.cell__{
+    font-size: 20px;
+    padding: 20px;
+    border: 2px solid 
+}
+
+.row__ .cell__:not(:nth-child(1)){
+    text-align: center;
+}
+
+/* _____TABLE__ADD__STYLE_____ */
+/* _____TABLE__ADD__STYLE_____ */
+/* _____TABLE__ADD__STYLE_____ */
+/* _____TABLE__ADD__STYLE_____ */
+
+@media (max-width:768px) {
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}

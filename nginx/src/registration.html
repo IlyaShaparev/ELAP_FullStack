@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>ELAP-author</title>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="shortcut icon" href="img/logo_brown.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style_reg.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="content-container">
+                    <img id="logo" src="img/logo_brown.png">
+                    <p> Онлайн-университет "Развитие" </p>
+                    <p> "Обучение не имеет границ" </p>
+                    <p> Электронная зачетная книжка студента ОУ "Развитие"</p>
+                </div>
+            </div>
+        </header>
+        <section id="main">
+            <div class="container">
+                <div class="content-container">
+                    <form action="reg/check_user.php" method="POST" id="form">
+                        <p> Логин: <input type="text" name="login" id="login" required></p>
+                        <p> Пароль: <input type="password" name="password" id="password" required></p>
+                        <p> Я - Работник <input type="checkbox" name="admin" id="worker"></p>
+                        <button type="submit" id="btn"> Продолжить </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <p> 2021 © Student MIREA ALL RIGHTS RESERVED Онлайн-университет "Развитие" </p> 
+            </div>
+        </footer>
+    </body>
+</html>

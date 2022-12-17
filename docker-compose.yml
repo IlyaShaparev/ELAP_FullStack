@@ -1,0 +1,33 @@
+version: '3'
+services:
+  apache:
+    build: ./apache
+    volumes:
+      - ./apache/src:/var/www/html/
+    environment:
+      - DB_HOST=my-sql
+      - DB_PORT=3306
+      - DB_NAME=appDB
+      - DB_USER=user
+      - DB_PASSWORD=password
+    depends_on:
+      - sql
+
+  sql:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+
+    
+  nginx:
+    build: ./nginx
+    volumes:
+      - ./nginx/src:/etc/nginx/html/
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 85:85
+    depends_on:
+     - apache
